@@ -1,0 +1,16 @@
+flasher
+├─ .github
+│  └─ workflows
+│     └─ build-esptool.yml
+│
+└─ typescript
+   ├─ src
+   │  ├─ index.html
+   │  ├─ index.ts
+   │  └─ webusb-serial.js
+   │
+   ├─ package.json
+   ├─ package-lock.json
+   └─ dist
+      ├─ index.html
+      └─ js
