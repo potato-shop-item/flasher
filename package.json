@@ -4,7 +4,7 @@
   "description": "This an example of using esptool-js with parcel and typescript",
   "source": "src/index.html",
   "scripts": {
-    "build": "npm-run-all clean genDocs parcel:build postbuild",
+    "build": "npm-run-all clean parcel:build postbuild"
     "clean": "shx rm -rf dist/* .parcel-cache",
     "dev": "npm-run-all clean genDocs parcel:dev",
     "genDocs": "npm run genDocs:root && shx mkdir -p dist && shx cp -r ../../docs dist",
