@@ -24,7 +24,7 @@ import {
   FlashSizeValues,
   LoaderOptions,
   Transport,
-} from "../../../lib";
+} from "../lib";
 import { serial } from "web-serial-polyfill";
 
 const serialLib = !navigator.serial && navigator.usb ? serial : navigator.serial;
