@@ -1,0 +1,76 @@
+<!DOCTYPE html><html><head><script type="importmap">{"imports":{"1AXdm":"./js/stub_flasher_32c2.e13e2a60.js","1RT0V":"./js/stub_flasher_32c61.c052c043.js","1exPc":"./js/esp32s2.493009a0.js","4v2Sn":"./js/esp32c6.5a275310.js","5ufbi":"./js/esp32c3.9a25bd00.js","6BxdX":"./js/stub_flasher_32.38d5f974.js","8NO11":"./js/stub_flasher_32p4rc1.2d47903d.js","8ubv3":"./js/stub_flasher_32c6.0491039b.js","9D08m":"./js/stub_flasher_32h2.acf41026.js","9Fdye":"./js/esp32c2.3173bfbe.js","9GXv7":"./js/esp32h2.5eafb220.js","9IDrp":"./js/esp32c61.ce232f1f.js","abqrS":"./js/esp32c5.049a0961.js","diV0f":"./js/esp32p4.c16bc4c6.js","dp5fl":"./js/stub_flasher_32c3.33bbe9fe.js","eHx6v":"./js/stub_flasher_8266.ecd2b813.js","fHCt5":"./js/stub_flasher_32p4.c076f2af.js","iRojP":"./js/stub_flasher_32c5.22d9c0f3.js","jqVo0":"./js/esp32s3.a92509a4.js","jzOHu":"./js/esp32.5676b321.js","ky1fd":"./js/stub_flasher_32s2.e303d051.js","lopxR":"./js/stub_flasher_32s3.c9554e39.js"}}</script>
+        <meta charset="utf-8">
+        <title>Potato Tool</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@4.19.0/css/xterm.css">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link rel="icon" href="favicon.ee2246ac.ico">
+         <script src="https://cdn.jsdelivr.net/npm/xterm@4.19.0/lib/xterm.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div id="safariErr" style="display: none"><p align="center" style="color: red">This tool is not supported on Safari browser!</p>
+        </div>
+        
+        <div class="container" id="main">
+            <div style="text-align: right; margin-top: 15px">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="debugLogging" value="">
+                    <label class="form-check-label" for="debugLogging">Show Debug log</label>
+                </div>
+            </div>
+
+            <hr style="margin-top: 10px">
+            
+            <div id="program">
+                <h3> Program </h3>
+                <label for="baudrates" id="lblBaudrate">Baudrate:</label>
+                <label style="display: none" id="lblConnTo">Connected to device: </label>
+                <select name="baudrates" id="baudrates">
+                    <option value="921600">921600</option>
+                    <option value="460800">460800</option>
+                    <option value="230400">230400</option>
+                    <option value="115200">115200</option>
+                </select>
+
+                <br><br>
+
+                <input class="btn btn-info btn-sm" type="button" id="connectButton" value="Connect">
+                <input class="btn btn-warning btn-sm" type="button" id="disconnectButton" value="Disconnect">
+                <input class="btn btn-danger btn-sm" type="button" id="eraseButton" value="Erase Flash">
+                <br>
+
+                <div class="alert alert-danger alert-dismissible" id="alertDiv" style="margin-top: 10px; display: none">
+                    <a href="#" class="close" aria-label="close" onclick="$('.alert').hide()">×</a>
+                    <span id="alertmsg"></span>
+                </div>
+
+                <div id="files">
+                    <table class="table table-striped" id="fileTable">
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                    <br>
+                    <input class="btn btn-info btn-sm" type="button" id="programButton" value="Program">
+                </div>
+
+                <output id="list"></output>
+                <hr>
+            </div>
+
+            <div id="terminal" style="background-color: #000; border-radius: 4px; margin-bottom: 20px; padding: 10px"></div>
+        </div>
+        <script src="./js/typescript.cf58ae44.js" type="module"></script>
+        <script>var isSafari = /constructor/i.test(window.HTMLElement) || function(p) {
+    return p.toString() === "[object SafariRemoteNotification]";
+}(!window['safari'] || typeof safari !== 'undefined' && window['safari'].pushNotification);
+if (isSafari) {
+    document.getElementById("safariErr").style.display = "inline";
+    document.getElementById("main").style.display = "none";
+}
+
+</script>
+    
+</body></html>
