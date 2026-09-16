@@ -1,0 +1,11 @@
+- name: Install esptool-js dependencies
+  working-directory: esptool-js
+  run: npm ci
+
+- name: Build esptool-js
+  working-directory: esptool-js
+  run: npm run build
+
+- name: Build typescript example
+  working-directory: esptool-js/examples/typescript
+  run: npm run build
