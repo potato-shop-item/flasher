@@ -10,7 +10,28 @@
          <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<style>@media (width <= 600px) {
+		<style>#fileTable tr {
+  flex-direction: column;
+  display: flex;
+}
+
+#fileTable td {
+  width: 100%;
+  display: block;
+}
+
+#fileTable .progress-cell {
+  width: 100%;
+  padding-top: 8px;
+}
+
+#fileTable progress {
+  width: 100%;
+  height: 24px;
+  display: block;
+}
+
+@media (width <= 600px) {
   body {
     font-size: 18px;
   }
